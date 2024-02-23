@@ -61,7 +61,7 @@ export const experience: Experience[] = [
     description:
       "Assisted professor with grading homework and project assignments. Held office hours to aid students in their understanding of core concepts and reported to the professor the extent of their understanding.",
     skills: ["C", "Data Structures", "Web Programming"],
-    startDate: "08-28-2023",
+    startDate: "28 August 2023",
   },
   {
     position: "Android Development Intern",
@@ -69,8 +69,8 @@ export const experience: Experience[] = [
     description:
       "In just one month, I played a key role in launching PluxAI, from conception to execution. Collaborating on integrating PluxAI with Firestore, I enabled real-time updates for employee timesheets. I also implemented a user-friendly leave enquiry screen for the PluxAI Android app, simplifying leave management. Utilizing the Room Persistence Library, I ensured secure local storage of attendance data and seamless synchronization with cloud storage, guaranteeing data integrity during critical events",
     skills: ["Java", "Kotlin", "Android Studio", "Google Firebase"],
-    startDate: "08-16-2022",
-    endDate: "12-23-2022",
+    startDate: "16 August 2022",
+    endDate: "23 December 2022",
   },
   {
     position: "Project Intern",
@@ -78,7 +78,7 @@ export const experience: Experience[] = [
     description:
       "I conducted thorough analysis of client servers hosted on Amazon Web Services (AWS), pinpointing the root cause of high CPU utilization. Additionally, I monitored server performance utilizing Datadog, a cloud-based monitoring and analytics platform, ensuring optimal operation and preemptively addressing any emerging issues.",
     skills: ["AWS", "Datadog"],
-    startDate: "02-16-2022",
-    endDate: "07-08-2022",
+    startDate: "16 February 2022",
+    endDate: "08 July 2022",
   },
 ];
