@@ -47,10 +47,10 @@ const Header = ({
             >
               <span
                 className={clsx(
-                  "mr-4 h-px bg-slate-600 motion-reduce:transition-none",
+                  "mr-4 h-px motion-reduce:transition-none",
                   currentElementIndexInViewport === index
                     ? "w-16 bg-slate-200"
-                    : "w-8 transition-all group-hover:w-16 group-hover:bg-slate-200 group-focus-visible:w-16 group-focus-visible:bg-slate-200"
+                    : "bg-slate-600 w-8 transition-all group-hover:w-16 group-hover:bg-slate-200 group-focus-visible:w-16 group-focus-visible:bg-slate-200"
                 )}
               ></span>
               <span
