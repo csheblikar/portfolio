@@ -1,31 +1,17 @@
-import { GitHub, LinkedIn } from "../components/icons";
-import { Experience, Project, SiteMetadata, Social } from "./types";
+import { Experience, Project } from "./types";
 
-export const siteMetadata: SiteMetadata = {
-  title: "Chaithanya Heblikar",
-  author: "Chaithanya Heblikar",
+export const siteMetadata = {
+  title: "Chaithanya Heblikar | Mobile Engineer & HCI Researcher",
+  author: {
+    name: "Chaithanya Heblikar",
+    github: "https://github.com/csheblikar",
+    linkedin: "https://www.linkedin.com/in/csheblikar/",
+  },
   tagline: "Grad Student at NAU",
   description:
     "Passionate mobile application developer and tech enthusiast dedicated to crafting innovative solutions for real-world challenges.",
   siteUrl: "https://csheblikar.me",
 };
-
-export const socials: Social[] = [
-  {
-    label: "GitHub",
-    url: "https://github.com/csheblikar",
-    icon: GitHub,
-  },
-  {
-    label: "LinkedIn",
-    url: "https://www.linkedin.com/in/csheblikar/",
-    icon: LinkedIn,
-  },
-  // {
-  //   label: "Email",
-  //   url: "mailto:csheblikar@gmail.com?subject=Hi%20there!",
-  // },
-];
 
 export const projects: Project[] = [
   {

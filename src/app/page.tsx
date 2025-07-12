@@ -2,11 +2,13 @@
 
 import { Scrollspy } from "@makotot/ghostui";
 import Image from "next/image";
-import { useEffect, useRef, useState } from "react";
-import Header from "./components/header";
-import Section from "./components/section";
-import { experience, projects } from "./lib/data";
-import { formatDate, formatDateISO } from "./utils/date";
+import { useRef } from "react";
+
+import Header from "@/components/header";
+import Section from "@/components/section";
+import Spotlight from "@/components/spotlight";
+import { experience, projects } from "@/lib/data";
+import { formatDate, formatDateISO } from "@/utils/date";
 
 export default function Home() {
   const sectionRefs = [
@@ -15,28 +17,9 @@ export default function Home() {
     useRef<HTMLElement>(null),
   ];
 
-  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
-
-  useEffect(() => {
-    const updateMousePosition = (e: MouseEvent) => {
-      // set mouse position with scroll offset
-      setMousePosition({ x: e.pageX, y: e.pageY });
-    };
-
-    window.addEventListener("mousemove", updateMousePosition);
-
-    return () => window.removeEventListener("mousemove", updateMousePosition);
-  }, []);
-
   return (
-    <div className="group/spotlight relative">
-      <div
-        className="pointer-events-none fixed inset-0 z-30 transition duration-300 lg:absolute"
-        style={{
-          background: `radial-gradient(600px at ${mousePosition.x}px ${mousePosition.y}px, rgba(29, 78, 216, 0.15), transparent 80%)`,
-        }}
-      ></div>
-      <div className="mx-auto min-h-screen max-w-(--breakpoint-xl) px-6 py-12 md:px-12 md:py-20 lg:px-24 lg:py-0">
+    <Spotlight>
+      <div className="mx-auto min-h-screen max-w-7xl px-6 py-12 md:px-12 md:py-20 lg:px-24 lg:py-0">
         <a
           href="#content"
           className="absolute left-0 top-0 block -translate-x-full rounded-sm bg-linear-to-br from-teal-400 via-blue-500 to-purple-600 px-4 py-3 text-sm font-bold uppercase tracking-widest text-white focus-visible:translate-x-0"
@@ -250,6 +233,6 @@ export default function Home() {
           )}
         </Scrollspy>
       </div>
-    </div>
+    </Spotlight>
   );
 }

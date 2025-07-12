@@ -1,8 +1,9 @@
 import clsx from "clsx";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+
+import { siteMetadata } from "@/lib/data";
 import "./globals.css";
-import { siteMetadata } from "./lib/data";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -11,10 +12,13 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: siteMetadata.title,
+  title: {
+    default: siteMetadata.title,
+    template: `%s | ${siteMetadata.author.name}`,
+  },
   description: siteMetadata.description,
   authors: {
-    name: siteMetadata.author,
+    name: siteMetadata.author.name,
     url: siteMetadata.siteUrl,
   },
 };
