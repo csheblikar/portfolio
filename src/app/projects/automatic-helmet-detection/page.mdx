@@ -23,3 +23,50 @@ export const metadata = {
 };
 
 export default (props) => <ProjectLayout project={project} {...props} />;
+
+This project is a real-time computer vision system built to promote road safety by detecting helmet usage among motorcycle riders and extracting vehicle license plate information. Developed as part of an academic project, it processes live video feeds to automatically identify safety violations and log vehicle details for enforcement purposes.
+
+The system uses two lightweight, optimized deep learning models: **YOLOv5** for helmet detection and **MobileNet-SSD** for license plate localization, ensuring fast and accurate performance suitable for real-time applications.
+
+## Key Features
+
+<Accordian as="dl">
+  <AccordianItem>
+    <AccordianTrigger as="dt">
+      Helmet Detection
+    </AccordianTrigger>
+    <AccordianContent as="dd">
+      Uses YOLOv5 to identify motorcycle riders and determine if they are wearing helmets.
+    </AccordianContent>
+  </AccordianItem>
+  <AccordianItem>
+    <AccordianTrigger as="dt">
+      License Plate Detection
+    </AccordianTrigger>
+    <AccordianContent as="dd">
+      Employs MobileNet-SSD to accurately detect license plates in the scene.
+    </AccordianContent>
+  </AccordianItem>
+  <AccordianItem>
+    <AccordianTrigger as="dt">
+      Violation Reporting
+    </AccordianTrigger>
+    <AccordianContent as="dd">
+      Automatically captures and logs images of violations with timestamped data and recognized license numbers.
+    </AccordianContent>
+  </AccordianItem>
+  <AccordianItem>
+    <AccordianTrigger as="dt">
+      Scalable & Modular
+    </AccordianTrigger>
+    <AccordianContent as="dd">
+      Designed for integration with smart traffic systems and urban surveillance setups.
+    </AccordianContent>
+  </AccordianItem>
+</Accordian>
+
+## Tech Stack
+
+- **Python** - Core programming language
+- **YOLOv5 & MobileNet-SSD** - Helmet and license plate detection models
+- **Google Colab & Git** - Development and version control tools
