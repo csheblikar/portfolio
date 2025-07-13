@@ -17,7 +17,7 @@ export type Project = {
   description: string;
   url: string;
   skills: string[];
-  image: string;
+  image?: string;
 };
 
 export type Experience = {

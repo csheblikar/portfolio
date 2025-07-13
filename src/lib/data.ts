@@ -15,34 +15,38 @@ export const siteMetadata = {
 
 export const projects: Project[] = [
   {
-    title: "Automatic Helmet detection and License Plate Recognition",
+    title: "OpenAI Subtitle Generator",
     description:
-      "I developed a high-performing deep learning model utilizing YOLO, attaining an impressive 93% accuracy in detecting individuals without helmets on motorcycles. Additionally, I integrated MobilenetSSD to effectively identify and extract license plate numbers, enabling efficient tracking and identification of helmet-less riders.",
-    url: "https://github.com/csheblikar/fyp",
-    skills: ["React", "Next.js", "Tailwind CSS"],
-    image: "https://placehold.co/200x48.png",
+      "A command-line tool that generates subtitle files from spoken audio in video files using OpenAI's transcription models.",
+    url: "/projects/openai-subtitle-generator",
+    skills: ["Python", "OpenAI", "ffmpeg"],
   },
   {
-    title: "Healthful",
+    title: "MovieFlix",
     description:
-      "I developed a health prediction Android app, streamlining healthcare access. Users input symptoms for disease prediction and receive recommendations for nearby healthcare centers. This app simplifies proactive healthcare management, aiming to improve accessibility and outcomes for all users.",
-    url: "https://github.com/csheblikar/healthful",
-    skills: ["Java", "Android"],
-    image: "https://placehold.co/200x48.png",
+      "A mobile movie discovery app built with React Native and TypeScript, featuring a personalized movie feed based on user engagement metrics.",
+    url: "/projects/movieflix",
+    skills: ["React Native", "Expo", "TypeScript", "Tailwind CSS", "Appwrite"],
   },
   {
-    title: "Vehicle Service Management System",
+    title: "SpokeIt",
     description:
-      "Built a LAMP-stack based web application to streamline automobile servicing.",
-    url: "https://github.com/csheblikar/Vehicle-Service-Management-System",
-    skills: ["HTML", "CSS", "PHP", "MySQL"],
-    image: "https://placehold.co/200x48.png",
+      "A speech therapy game built in Unity, designed to support children aged 4-8 with orofacial cleft palate in improving their pronunciation.",
+    url: "/projects/spokeit",
+    skills: ["Unity", "C#", "Google Cloud Speech-to-Text", "Firebase"],
+  },
+  {
+    title: "PluxAI",
+    description:
+      "An enterprise Android app for managing employee attendance, leave requests, and real-time reporting, built during my internship at SecqurAIse Technologies.",
+    url: "/projects/pluxai",
+    skills: ["Java", "Kotlin", "Android Studio", "Firebase"],
   },
 ];
 
 export const experience: Experience[] = [
   {
-    position: "Teaching assistant",
+    position: "Teaching Assistant",
     company: "Northern Arizona University",
     description:
       "Assisted professor with grading homework and project assignments. Held office hours to aid students in their understanding of core concepts and reported to the professor the extent of their understanding.",

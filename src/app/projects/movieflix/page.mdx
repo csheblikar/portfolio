@@ -1,0 +1,82 @@
+import {
+  Accordian,
+  AccordianContent,
+  AccordianItem,
+  AccordianTrigger,
+} from '@/components/accordian';
+import ProjectLayout from "@/components/layouts/project";
+
+export const project = {
+  title: "MovieFlix",
+  date: "2025-05",
+  description:
+    "A mobile movie discovery app built with React Native and TypeScript, featuring a personalized movie feed based on user engagement metrics.",
+  image: "/images/projects/movieflix.png",
+  githubUrl: "https://github.com/csheblikar/rn-movieflix",
+  tools: ["React Native", "Expo", "TypeScript", "Tailwind CSS", "Appwrite"],
+  featured: true,
+};
+
+export const metadata = {
+  title: project.title,
+  description: project.description,
+};
+
+export default (props) => <ProjectLayout project={project} {...props} />;
+
+*MovieFlix* is a mobile movie discovery app built using React Native and TypeScript. It is designed for movie lovers who want a quick, smooth, and personalized way to browse, search, and explore trending films. I created MovieFlix as a performance-focused app with real-time data handling, reusable components, and a clean, scroll-happy UI using Tailwind CSS.
+
+What sets MovieFlix apart is its smart content ranking engine, users don't just scroll through static lists. The app dynamically adjusts the movie feed based on user behavior like watch time, likes, and views, giving everyone a personalized movie-finding experience.
+
+## Key Features
+
+<Accordian as="dl">
+  <AccordianItem>
+    <AccordianTrigger as="dt">
+      Engagement-Based Ranking
+    </AccordianTrigger>
+    <AccordianContent as="dd">
+      A custom popularity algorithm powered by Appwrite to dynamically sort 500+ movies by real user interaction.
+    </AccordianContent>
+  </AccordianItem>
+  <AccordianItem>
+    <AccordianTrigger as="dt">
+      Fast, Smooth UI
+    </AccordianTrigger>
+    <AccordianContent as="dd">
+      Optimized performance with reusable components and responsive Tailwind-styled layouts.
+    </AccordianContent>
+  </AccordianItem>
+  <AccordianItem>
+    <AccordianTrigger as="dt">
+      Movie Cards with Detail Pages
+    </AccordianTrigger>
+    <AccordianContent as="dd">
+      Tappable movie tiles with trailers, descriptions, genres, and user feedback.
+    </AccordianContent>
+  </AccordianItem>
+  <AccordianItem>
+    <AccordianTrigger as="dt">
+      Search & Filter
+    </AccordianTrigger>
+    <AccordianContent as="dd">
+      Real-time search functionality with filter options for genre, rating, and popularity.
+    </AccordianContent>
+  </AccordianItem>
+  <AccordianItem>
+    <AccordianTrigger as="dt">
+      Cross-Platform Ready
+    </AccordianTrigger>
+    <AccordianContent as="dd">
+      Built using Expo for seamless Android and iOS support.
+    </AccordianContent>
+  </AccordianItem>
+</Accordian>
+
+## Tech Stack
+
+- **Frontend:** React Native (Expo), TypeScript
+- **UI:** Tailwind CSS for React Native
+- **Backend:** Appwrite (for database and user engagement metrics)
+- **APIs:** Movie data sourced via external RESTful APIs
+- **Dev Tools:** Git, GitHub, VS Code

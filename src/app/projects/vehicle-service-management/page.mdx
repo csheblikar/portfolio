@@ -1,0 +1,82 @@
+import {
+  Accordian,
+  AccordianContent,
+  AccordianItem,
+  AccordianTrigger,
+} from '@/components/accordian';
+import ProjectLayout from '@/components/layouts/project';
+
+export const project = {
+  title: "Vehicle Service Management System",
+  date: "2020-11",
+  description:
+    "A web-based application for managing automobile service appointments, customer records, and maintenance history. Built with the LAMP stack, it provides an intuitive dashboard for service centers to track and manage vehicle servicing efficiently.",
+  image: "https://placehold.co/200x48.png",
+  githubUrl: "https://github.com/csheblkar/vehicle-service-management-system",
+  madeAt: "JSSATE",
+  tools: ["HTML", "CSS", "JavaScript", "PHP", "MySQL"],
+};
+
+export const metadata = {
+  title: project.title,
+  description: project.description,
+};
+
+export default (props) => <ProjectLayout project={project} {...props} />;
+
+Vehicle Service Management System is a web-based application designed to streamline the management of automobile service appointments, customer records, and maintenance history. Developed as a full-stack project using the LAMP stack, it provides service centers with an intuitive dashboard to track and manage vehicle servicing more efficiently.
+
+This project was built to simplify workflows for mechanics, front-desk staff, and customers—replacing paper-based logs with a centralized digital system.
+
+## Key Features
+
+<Accordian as="dl">
+  <AccordianItem>
+    <AccordianTrigger as="dt">
+      Service Booking
+    </AccordianTrigger>
+    <AccordianContent>
+      Customers can schedule appointments and view upcoming service details.
+    </AccordianContent>
+  </AccordianItem>
+  <AccordianItem>
+    <AccordianTrigger as="dt">
+      Admin Dashboard
+    </AccordianTrigger>
+    <AccordianContent>
+      Service center staff can manage customer data, assign mechanics, and view service history.
+    </AccordianContent>
+  </AccordianItem>
+  <AccordianItem>
+    <AccordianTrigger as="dt">
+      Service Record Tracking
+    </AccordianTrigger>
+    <AccordianContent>
+      Maintains a searchable database of completed and pending services for each vehicle.
+    </AccordianContent>
+  </AccordianItem>
+  <AccordianItem>
+    <AccordianTrigger as="dt">
+      Authentication & Roles
+    </AccordianTrigger>
+    <AccordianContent>
+      Supports secure login for admins and customers with role-based access control.
+    </AccordianContent>
+  </AccordianItem>
+  <AccordianItem>
+    <AccordianTrigger as="dt">
+      Responsive UI
+    </AccordianTrigger>
+    <AccordianContent>
+      Optimized layout for desktops and tablets, suitable for garage front desks or tablets on the floor.
+    </AccordianContent>
+  </AccordianItem>
+</Accordian>
+
+## Tech Stack
+
+- **Frontend:** HTML, CSS, JavaScript
+- **Backend:** PHP
+- **Database:** MySQL
+- **Stack:** LAMP (Linux, Apache, MySQL, PHP)
+- **Tools:** phpMyAdmin, VS Code, Git

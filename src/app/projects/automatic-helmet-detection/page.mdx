@@ -1,0 +1,25 @@
+import {
+  Accordian,
+  AccordianContent,
+  AccordianItem,
+  AccordianTrigger,
+} from '@/components/accordian';
+import ProjectLayout from "@/components/layouts/project";
+
+export const project = {
+  title: "Automatic Helmet Detection and License Plate Recognition",
+  date: "2022-02",
+  description:
+    "I developed a high-performing deep learning model utilizing YOLO, attaining an impressive 93% accuracy in detecting individuals without helmets on motorcycles. Additionally, I integrated MobilenetSSD to effectively identify and extract license plate numbers, enabling efficient tracking and identification of helmet-less riders.",
+  image: "https://placehold.co/200x48.png",
+  githubUrl: "https://github.com/csheblikar/yolo-helmet-detection",
+  madeAt: "JSSATE",
+  tools: ["Python", "OpenCV", "YOLOv5", "MobileNet SSD"],
+};
+
+export const metadata = {
+  title: project.title,
+  description: project.description,
+};
+
+export default (props) => <ProjectLayout project={project} {...props} />;

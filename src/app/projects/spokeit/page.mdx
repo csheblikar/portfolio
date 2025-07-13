@@ -1,0 +1,92 @@
+import {
+  Accordian,
+  AccordianContent,
+  AccordianItem,
+  AccordianTrigger,
+} from "@/components/accordian";
+import ProjectLayout from "@/components/layouts/project";
+
+export const project = {
+  title: "SpokeIt",
+  date: "2024-01",
+  description:
+    "A speech therapy game built in Unity, designed to support children aged 4-8 with orofacial cleft palate in improving their pronunciation.",
+  image: "/images/projects/spokeit.png",
+  url: "https://spokeitthegame.com/",
+  madeAt: "NAU",
+  tools: ["Unity", "C#", "Google Cloud Speech-to-Text", "Firebase"],
+  featured: true,
+};
+
+export const metadata = {
+  title: project.title,
+  description: project.description,
+};
+
+export default (props) => <ProjectLayout project={project} {...props} />;
+
+*SpokeIt* is a speech therapy game built in Unity, designed to support children aged 4-8 with orofacial cleft palate in improving their pronunciation. Originally developed in Swift for iOS, I led the complete migration to Unity to expand platform support and enhance scalability. The game integrates real-time speech recognition, interactive mini-games, and a gentle, story-driven interface to keep young users engaged throughout their learning journey.
+
+This project was developed in collaboration with a multidisciplinary research team at Northern Arizona University and is being tested for both usability and therapeutic impact.
+
+## Key Features
+
+<Accordian as="dl">
+  <AccordianItem>
+    <AccordianTrigger as="dt">
+      Real-time Speech Recognition
+    </AccordianTrigger>
+    <AccordianContent as="dd">
+      Integrated Google Cloud Speech-to-Text to detect pronunciation accuracy during gameplay.
+    </AccordianContent>
+  </AccordianItem>
+  <AccordianItem>
+    <AccordianTrigger as="dt">
+      Five Interactive Mini-Games
+    </AccordianTrigger>
+    <AccordianContent as="dd">
+      Each designed to reinforce target phonemes through fun, repeatable actions.
+    </AccordianContent>
+  </AccordianItem>
+  <AccordianItem>
+    <AccordianTrigger as="dt">
+      Narrative Mode
+    </AccordianTrigger>
+    <AccordianContent as="dd">
+      An engaging storyline guides users through levels, increasing motivation and session duration.
+    </AccordianContent>
+  </AccordianItem>
+  <AccordianItem>
+    <AccordianTrigger as="dt">
+      Cross-Platform Support
+    </AccordianTrigger>
+    <AccordianContent as="dd">
+      Rebuilt from Swift (SpriteKit) to Unity, now fully functional on both Android and iOS.
+    </AccordianContent>
+  </AccordianItem>
+  <AccordianItem>
+    <AccordianTrigger as="dt">
+      User Profile System
+    </AccordianTrigger>
+    <AccordianContent as="dd">
+      Secure authentication using Google Play Games and Apple Game Center for personalized tracking.
+    </AccordianContent>
+  </AccordianItem>
+  <AccordianItem>
+    <AccordianTrigger as="dt">
+      Analytics-Friendly
+    </AccordianTrigger>
+    <AccordianContent as="dd">
+      Tracks interaction and speech input data for research on engagement and learning outcomes.
+    </AccordianContent>
+  </AccordianItem>
+</Accordian>
+
+## Tech Stack
+
+- **Game Engine:** Unity (C#)
+- **Speech Recognition:** Google Cloud Speech-to-Text API
+- **Authentication:** Google Play Games Services, Apple Game Center
+- **Version Control:** Git, GitHub
+- **Design & Testing:** Figma (early prototypes), User studies with Likert-scale evaluations
+- **Platforms:** Android, iOS

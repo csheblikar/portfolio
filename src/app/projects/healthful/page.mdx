@@ -1,0 +1,86 @@
+import {
+  Accordian,
+  AccordianContent,
+  AccordianItem,
+  AccordianTrigger,
+} from '@/components/accordian';
+import ProjectLayout from "@/components/layouts/project";
+
+export const project = {
+  title: "Healthful",
+  date: "2021-04",
+  description: "",
+  image: "/images/projects/healthful.png",
+  githubUrl: "https://github.com/csheblikar/healthful",
+  madeAt: "JSSATE",
+  tools: ["Java", "XML", "Android Studio", "Google Maps Platform"],
+};
+
+export const metadata = {
+  title: project.title,
+  description: project.description,
+};
+
+export default (props) => <ProjectLayout project={project} {...props} />;
+
+*Healthful* is an Android app designed to provide quick, accessible health predictions based on user-reported symptoms. Built using Java and XML, the app uses a rule-based symptom-matching algorithm to suggest potential conditions and recommend nearby healthcare facilities.
+
+The motivation behind Healthful was to support proactive care in areas with limited medical access. Whether users need a quick sense-check or directions to the closest clinic, Healthful makes it easier to take the next step.
+
+## Key Features
+
+<Accordian as="dl">
+  <AccordianItem>
+    <AccordianTrigger as="dt">
+      Symptom-Based Prediction
+    </AccordianTrigger>
+    <AccordianContent as="dd">
+      Users can input symptoms and receive likely health conditions based on a simple rule-based algorithm.
+    </AccordianContent>
+  </AccordianItem>
+  <AccordianItem>
+    <AccordianTrigger as="dt">
+      Location-Based Hospital Suggestions
+    </AccordianTrigger>
+    <AccordianContent as="dd">
+      Integrated Google Maps API to show nearby clinics or hospitals with navigation support.
+    </AccordianContent>
+  </AccordianItem>
+  <AccordianItem>
+    <AccordianTrigger as="dt">
+      Clean UI
+    </AccordianTrigger>
+    <AccordianContent as="dd">
+      Designed an intuitive, minimal layout for fast access and clear results.
+    </AccordianContent>
+  </AccordianItem>
+  <AccordianItem>
+    <AccordianTrigger as="dt">
+      Offline Access
+    </AccordianTrigger>
+    <AccordianContent as="dd">
+      Cached previous inputs and predictions for quick reference without an internet connection.
+    </AccordianContent>
+  </AccordianItem>
+  <AccordianItem>
+    <AccordianTrigger as="dt">
+      High Usability
+    </AccordianTrigger>
+    <AccordianContent as="dd">
+      Achieved 80% satisfaction in user feedback during informal testing sessions.
+    </AccordianContent>
+  </AccordianItem>
+</Accordian>
+
+## Tech Stack
+
+- **Languages:**
+  - Java
+  - XML
+
+- **Platform & Frameworks:**
+  - Android Studio
+
+- **APIs & Services:**
+  - Google Maps API (for location and navigation)
+  - Firebase (as optional cloud backup/storage)

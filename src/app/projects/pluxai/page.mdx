@@ -1,0 +1,83 @@
+import {
+  Accordian,
+  AccordianContent,
+  AccordianItem,
+  AccordianTrigger,
+} from '@/components/accordian';
+import ProjectLayout from '@/components/layouts/project';
+
+export const project = {
+  title: 'PluxAI',
+  date: '2022-08',
+  description:
+    'An enterprise Android app for managing employee attendance, leave requests, and real-time reporting, built during my internship at SecqurAIse Technologies.',
+  image: '/images/projects/pluxai.png',
+  url: 'https://www.secquraise.com/pluxai',
+  madeAt: 'SecqurAIse',
+  tools: ['Java', 'Kotlin', 'Android Studio', 'Firebase'],
+  featured: true,
+};
+
+export const metadata = {
+  title: project.title,
+  description: project.description,
+};
+
+export default (props) => <ProjectLayout project={project} {...props} />;
+
+*PluxAI* is an enterprise Android application designed to manage employee attendance, leave requests, and real-time reporting for HR teams. Built during my internship at SecqurAIse Technologies, I led the Android development process from ideation to Play Store deployment within just 3 months.
+
+The app features seamless cloud sync, offline-first architecture, and a clean UI for both employees and administrators, helping streamline organizational workflows.
+
+## Key Features
+
+<Accordian as="dl">
+  <AccordianItem>
+    <AccordianTrigger as="dt">
+      Attendance Management
+    </AccordianTrigger>
+    <AccordianContent>
+      Allows employees to clock in/out, with data securely stored both locally and in the cloud.
+    </AccordianContent>
+  </AccordianItem>
+  <AccordianItem>
+    <AccordianTrigger as="dt">
+      Leave Request System
+    </AccordianTrigger>
+    <AccordianContent>
+      Users can submit, track, and manage leave requests with real-time updates.
+    </AccordianContent>
+  </AccordianItem>
+  <AccordianItem>
+    <AccordianTrigger as="dt">
+      Realtime Sync
+    </AccordianTrigger>
+    <AccordianContent>
+      Integrated Firebase Realtime Database and Firestore for instant data updates across devices.
+    </AccordianContent>
+  </AccordianItem>
+  <AccordianItem>
+    <AccordianTrigger as="dt">
+      Offline Mode
+    </AccordianTrigger>
+    <AccordianContent>
+      Used Room DB to ensure offline persistence and smooth syncing once reconnected.
+    </AccordianContent>
+  </AccordianItem>
+  <AccordianItem>
+    <AccordianTrigger as="dt">
+      Secure Authentication
+    </AccordianTrigger>
+    <AccordianContent>
+      Integrated Firebase Authentication for secure and easy login.
+    </AccordianContent>
+  </AccordianItem>
+</Accordian>
+
+## Tech Stack
+
+- **Languages:** Java, Kotlin
+- **Architecture:** MVVM
+- **Database:** Firebase Realtime Database, Cloud Firestore, Room
+- **Platform:** Android (Android Studio)
+- **Tools:** Git, Firebase Authentication

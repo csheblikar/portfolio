@@ -1,0 +1,80 @@
+import {
+  Accordian,
+  AccordianContent,
+  AccordianItem,
+  AccordianTrigger,
+} from '@/components/accordian';
+import ProjectLayout from "@/components/layouts/project";
+
+export const project = {
+  title: "OpenAI Subtitle Generator",
+  date: "2025-07",
+  description: "A command-line tool that generates subtitle files from spoken audio in video files using OpenAI's transcription models.",
+  image: "/images/projects/openai-subtitle-generator.png",
+  githubUrl: "https://github.com/csheblikar/openai-subtitle-generator",
+  tools: ["Python", "OpenAI", "ffmpeg"],
+  featured: true,
+};
+
+export const metadata = {
+  title: project.title,
+  description: project.description,
+};
+
+export default (props) => <ProjectLayout project={project} {...props} />;
+
+*OpenAI Subtitle Generator* is a lightweight command-line tool built in Python to generate subtitle (.srt) files from spoken audio in video files. Designed to streamline the subtitle creation process for researchers and content creators, it transcribes audio with high accuracy and formats the output into time-stamped subtitles ready for direct use in media players or editing software.
+
+This tool was especially helpful in supporting research video analysis for behavioral studies and accessibility testing.
+
+## Key Features
+
+<Accordian as="dl">
+  <AccordianItem>
+    <AccordianTrigger as="dt">
+      Automatic Transcription
+    </AccordianTrigger>
+    <AccordianContent as="dd">
+      Uses Google Cloud Speech-to-Text API for accurate, multi-language transcription.
+    </AccordianContent>
+  </AccordianItem>
+  <AccordianItem>
+    <AccordianTrigger as="dt">
+      SRT Formatting
+    </AccordianTrigger>
+    <AccordianContent as="dd">
+      Converts raw transcriptions into .srt files with proper timestamps and line breaks.
+    </AccordianContent>
+  </AccordianItem>
+  <AccordianItem>
+    <AccordianTrigger as="dt">
+      Customizable Settings
+    </AccordianTrigger>
+    <AccordianContent as="dd">
+      Allows adjustments for language, timing offset, and segment length.
+    </AccordianContent>
+  </AccordianItem>
+  <AccordianItem>
+    <AccordianTrigger as="dt">
+      CLI-Friendly
+    </AccordianTrigger>
+    <AccordianContent as="dd">
+      Simple command-line interface for quick processing of multiple video files.
+    </AccordianContent>
+  </AccordianItem>
+  <AccordianItem>
+    <AccordianTrigger as="dt">
+      Lightweight & Fast
+    </AccordianTrigger>
+    <AccordianContent as="dd">
+      Optimized for speed and minimal system load during batch processing.
+    </AccordianContent>
+  </AccordianItem>
+</Accordian>
+
+## Tech Stack
+
+- **Language:** Python
+- **APIs:** OpenAI
+- **File Support:** Processes `.mp4`, `.mp3`, and outputs `.srt`
+- **Tools:** Git, OpenAI
