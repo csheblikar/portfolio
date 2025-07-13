@@ -4,13 +4,13 @@ import { usePathname } from "next/navigation";
 import { createContext, useEffect, useRef } from "react";
 
 function usePrevious<T>(value: T) {
-  const ref = useRef<T>();
+  const ref = useRef<T>(null);
 
   useEffect(() => {
     ref.current = value;
   }, [value]);
 
-  return ref.current;
+  return ref.current as T;
 }
 
 export const AppContext = createContext<{ previousPathname?: string }>({});

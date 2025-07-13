@@ -4,7 +4,7 @@ import { ArrowUpRightIcon } from "@heroicons/react/20/solid";
 import { Scrollspy } from "@makotot/ghostui";
 import Image from "next/image";
 import Link from "next/link";
-import { useRef } from "react";
+import { RefObject, useRef } from "react";
 
 import Section from "@/components/section";
 import Sidebar from "@/components/sidebar";
@@ -20,7 +20,10 @@ export default function Home() {
 
   return (
     <div className="mx-auto min-h-screen max-w-7xl px-6 py-12 md:px-12 md:py-20 lg:px-24 lg:py-0">
-      <Scrollspy sectionRefs={sectionRefs} offset={-48}>
+      <Scrollspy
+        sectionRefs={sectionRefs as RefObject<HTMLElement>[]}
+        offset={-48}
+      >
         {({ currentElementIndexInViewport }) => (
           <div className="lg:flex lg:justify-between lg:gap-4">
             <Sidebar
