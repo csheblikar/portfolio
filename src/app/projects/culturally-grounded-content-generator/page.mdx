@@ -4,7 +4,14 @@ import {
   AccordianItem,
   AccordianTrigger,
 } from '@/components/accordian';
+import Carousel from '@/components/carousel';
 import ProjectLayout from '@/components/layouts/project';
+
+import image1 from './cgcg1.png';
+import image2 from './cgcg2.png';
+import image3 from './cgcg3.png';
+import image4 from './cgcg4.png';
+import image5 from './cgcg5.png';
 
 export const project = {
   title: "Culturally Grounded Content Generator",
@@ -27,6 +34,8 @@ export default (props) => <ProjectLayout project={project} {...props} />;
 This project explored how AI-powered educational platforms can be redesigned to better serve culturally diverse users, especially Indigenous communities. As part of a research initiative at NAU, I led a usability-focused design process that included heuristic evaluations, participatory design sessions, and high-fidelity prototyping using Figma.
 
 Our goal was to address gaps in accessibility and cultural responsiveness by redesigning chat-based educational tools. The result was a more intuitive, collaborative, and inclusive platform tailored to the needs of real users.
+
+<Carousel images={[image1, image2, image3, image4, image5]} />
 
 ## Key Features
 

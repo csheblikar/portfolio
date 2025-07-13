@@ -4,7 +4,14 @@ import {
   AccordianItem,
   AccordianTrigger,
 } from "@/components/accordian";
+import Carousel from "@/components/carousel";
 import ProjectLayout from "@/components/layouts/project";
+
+import image1 from "./spokeit1.PNG";
+import image2 from "./spokeit2.PNG";
+import image3 from "./spokeit3.PNG";
+import image4 from "./spokeit4.PNG";
+import image5 from "./spokeit5.PNG";
 
 export const project = {
   title: "SpokeIt",
@@ -28,6 +35,8 @@ export default (props) => <ProjectLayout project={project} {...props} />;
 *SpokeIt* is a speech therapy game built in Unity, designed to support children aged 4-8 with orofacial cleft palate in improving their pronunciation. Originally developed in Swift for iOS, I led the complete migration to Unity to expand platform support and enhance scalability. The game integrates real-time speech recognition, interactive mini-games, and a gentle, story-driven interface to keep young users engaged throughout their learning journey.
 
 This project was developed in collaboration with a multidisciplinary research team at Northern Arizona University and is being tested for both usability and therapeutic impact.
+
+<Carousel images={[image1, image2, image3, image4, image5]} />
 
 ## Key Features
 

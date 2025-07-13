@@ -4,7 +4,14 @@ import {
   AccordianItem,
   AccordianTrigger,
 } from '@/components/accordian';
+import Carousel from '@/components/carousel';
 import ProjectLayout from '@/components/layouts/project';
+
+import image1 from './vsms1.png';
+import image2 from './vsms2.png';
+import image3 from './vsms3.png';
+import image4 from './vsms4.png';
+import image5 from './vsms5.png';
 
 export const project = {
   title: "Vehicle Service Management System",
@@ -27,6 +34,8 @@ export default (props) => <ProjectLayout project={project} {...props} />;
 Vehicle Service Management System is a web-based application designed to streamline the management of automobile service appointments, customer records, and maintenance history. Developed as a full-stack project using the LAMP stack, it provides service centers with an intuitive dashboard to track and manage vehicle servicing more efficiently.
 
 This project was built to simplify workflows for mechanics, front-desk staff, and customers—replacing paper-based logs with a centralized digital system.
+
+<Carousel images={[image1, image2, image3, image4, image5]} />
 
 ## Key Features
 

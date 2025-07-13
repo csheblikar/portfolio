@@ -4,7 +4,12 @@ import {
   AccordianItem,
   AccordianTrigger,
 } from '@/components/accordian';
+import Carousel from '@/components/carousel';
 import ProjectLayout from "@/components/layouts/project";
+
+import image1 from './movieflix1.png';
+import image2 from './movieflix2.png';
+import image3 from './movieflix3.png';
 
 export const project = {
   title: "MovieFlix",
@@ -27,6 +32,11 @@ export default (props) => <ProjectLayout project={project} {...props} />;
 *MovieFlix* is a mobile movie discovery app built using React Native and TypeScript. It is designed for movie lovers who want a quick, smooth, and personalized way to browse, search, and explore trending films. I created MovieFlix as a performance-focused app with real-time data handling, reusable components, and a clean, scroll-happy UI using Tailwind CSS.
 
 What sets MovieFlix apart is its smart content ranking engine, users don't just scroll through static lists. The app dynamically adjusts the movie feed based on user behavior like watch time, likes, and views, giving everyone a personalized movie-finding experience.
+
+<Carousel
+  images={[image1, image2, image3]}
+  imagesPerView={{ base: 2, md: 3 }}
+/>
 
 ## Key Features
 
