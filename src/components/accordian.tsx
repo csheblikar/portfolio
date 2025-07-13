@@ -18,7 +18,7 @@ export function Accordian<T extends React.ElementType = "div">({
   return (
     <Component
       {...props}
-      className="not-prose mx-auto w-full max-w-lg divide-y divide-white/5 rounded-xl bg-white/5"
+      className="not-prose w-full divide-y divide-white/5 rounded-xl bg-white/5"
     />
   );
 }

@@ -1,25 +1,57 @@
+"use client";
+
+import { ArrowLeftIcon } from "@heroicons/react/20/solid";
+import { useRouter } from "next/navigation";
+import { useContext } from "react";
+
+import { AppContext } from "@/app/providers";
 import { ProjectWithSlug } from "@/lib/projects";
+import { formatDate } from "@/utils/date";
 import Prose from "../prose";
 
 export default function ProjectLayout({
   project,
   children,
 }: React.PropsWithChildren<{ project: ProjectWithSlug }>) {
-  return (
-    <div className="mx-auto min-h-screen max-w-7xl px-6 py-12 md:px-12 md:py-20 lg:px-24 lg:py-0">
-      <article className="lg:flex lg:justify-between lg:gap-4">
-        <header className="lg:sticky lg:top-0 lg:flex lg:max-h-screen lg:w-1/2 lg:flex-col lg:justify-between lg:py-24">
-          <div>
-            <h1 className="text-4xl font-bold tracking-tight text-slate-200 sm:text-5xl">
-              {project.title}
-            </h1>
-          </div>
-        </header>
+  const router = useRouter();
+  const { previousPathname } = useContext(AppContext);
 
-        <Prose as="main" id="content" className="pt-24 lg:w-1/2 lg:py-24">
-          {children}
-        </Prose>
-      </article>
+  return (
+    <div className="lg:py-32">
+      <div className="xl:relative">
+        <div className="mx-auto max-w-2xl">
+          {previousPathname && (
+            <button
+              type="button"
+              onClick={() => router.back()}
+              aria-label="Go back to projects"
+              className="group mb-8 flex size-10 items-center justify-center rounded-full border border-slate-700/50 bg-slate-800 shadow-md ring-0 shadow-slate-800/5 ring-white/10 transition hover:border-slate-700 hover:ring-white/20 lg:absolute lg:-left-5 lg:-mt-2 lg:mb-0 xl:-top-1.5 xl:left-0 xl:mt-0"
+            >
+              <ArrowLeftIcon className="size-4 stroke-slate-500 transition group-hover:stroke-slate-400" />
+            </button>
+          )}
+
+          <article>
+            <header className="flex flex-col">
+              <h1 className="mt-6 text-4xl font-bold tracking-tight text-slate-100 sm:text-5xl">
+                {project.title}
+              </h1>
+              <time
+                dateTime={project.date}
+                className="order-first flex items-center text-base text-slate-500"
+              >
+                <span className="h-4 w-0.5 rounded-full bg-slate-500" />
+                <span className="ml-3">
+                  {formatDate(project.date, "MMM yyyy")}
+                </span>
+              </time>
+            </header>
+            <Prose className="mt-8" data-mdx-content>
+              {children}
+            </Prose>
+          </article>
+        </div>
+      </div>
     </div>
   );
 }

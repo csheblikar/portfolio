@@ -3,9 +3,11 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 
 import Container from "@/components/container";
+import { Header } from "@/components/header";
 import Spotlight from "@/components/spotlight";
 import { siteMetadata } from "@/lib/data";
 import "./globals.css";
+import { Providers } from "./providers";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -33,9 +35,12 @@ export default function RootLayout({
   return (
     <html lang="en-US" className={clsx("scroll-smooth", inter.variable)}>
       <body className="bg-slate-900 leading-relaxed text-slate-400 antialiased selection:bg-teal-300 selection:text-teal-900">
-        <Spotlight>
-          <Container>{children}</Container>
-        </Spotlight>
+        <Providers>
+          <Spotlight>
+            <Header />
+            <Container>{children}</Container>
+          </Spotlight>
+        </Providers>
       </body>
     </html>
   );

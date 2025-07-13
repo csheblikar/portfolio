@@ -6,8 +6,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { useRef } from "react";
 
-import Header from "@/components/header";
 import Section from "@/components/section";
+import Sidebar from "@/components/sidebar";
 import { experience, projects } from "@/lib/data";
 import { formatDate, formatDateISO } from "@/utils/date";
 
@@ -22,7 +22,7 @@ export default function Home() {
     <Scrollspy sectionRefs={sectionRefs} offset={-48}>
       {({ currentElementIndexInViewport }) => (
         <div className="lg:flex lg:justify-between lg:gap-4">
-          <Header
+          <Sidebar
             currentElementIndexInViewport={currentElementIndexInViewport}
           />
 

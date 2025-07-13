@@ -1,9 +1,7 @@
-import { ArrowLeftIcon } from "@heroicons/react/20/solid";
+import clsx from "clsx";
 import Link from "next/link";
 
-import { siteMetadata } from "@/lib/data";
 import { getAllProjects, ProjectWithSlug } from "@/lib/projects";
-import clsx from "clsx";
 
 function TableRow(data: ProjectWithSlug) {
   return (
@@ -51,19 +49,9 @@ export default async function ArchivePage() {
 
   return (
     <div className="lg:py-24">
-      <header>
-        <Link
-          className="group mb-2 inline-flex items-center leading-tight font-semibold text-teal-300"
-          href="/"
-        >
-          <ArrowLeftIcon className="mr-1 size-4 transition-transform group-hover:-translate-x-2" />
-          {siteMetadata.author.name}
-        </Link>
-
-        <h1 className="text-4xl font-bold tracking-tight text-slate-200 sm:text-5xl">
-          All Projects
-        </h1>
-      </header>
+      <h1 className="text-4xl font-bold tracking-tight text-slate-200 sm:text-5xl">
+        All Projects
+      </h1>
 
       <table id="content" className="mt-12 w-full border-collapse text-left">
         <thead className="sticky top-0 z-10 border-b border-slate-300/10 bg-slate-900/75 px-6 py-5 backdrop-blur">
