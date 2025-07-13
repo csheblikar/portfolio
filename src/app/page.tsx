@@ -36,21 +36,31 @@ export default function Home() {
               >
                 <div className="space-y-4">
                   <p>
-                    A passionate mobile application developer on a mission to
-                    blend innovation with social impact. With expertise in
-                    Android development and a burgeoning interest in iOS,
-                    I&apos;m currently crafting{" "}
-                    <strong className="text-slate-200">SpokeIt</strong> &mdash;
-                    an interactive speech therapy game in Unity, designed to
-                    empower individuals with speech impairments.
+                    There&apos;s something magical about building tech that talks
+                    back, especially when it can help someone speak for the first
+                    time. I&apos;m Chaithanya Heblikar, but most people call me Chai.
+                    I write code that lives inside mobile apps and games, with a
+                    focus on accessibility, playful design, and real-world impact.
                   </p>
                   <p>
-                    Beyond my digital endeavors, I find joy in the graceful
-                    movements of Kathak dance and pride in serving my community.
-                    From providing essential kits with Youth for Seva to
-                    founding <strong className="text-slate-200">AWAKE</strong>{" "}
-                    during the pandemic, my work extends beyond screens to make
-                    a meaningful difference.
+                    For the past few years, I&apos;ve been diving deep into Android
+                    development, game design in Unity, and accessibility-focused
+                    tech. What started with building small health apps has grown
+                    into creating full-fledged speech therapy games, analyzing
+                    mobility data, and mentoring students through their own tech
+                    journeys.
+                  </p>
+                  <p>
+                    From launching apps like SpokeIt and Healthful to collaborating
+                    on AI usability research and broadband analysis, my work blends
+                    creativity with a clear sense of impact. I&apos;ve had the chance to
+                    work with startups, professors, and non-profits, and every
+                    project has helped me grow as both a developer and a human.
+                  </p>
+                  <p>
+                    Right now, I&apos;m part of the research team at Northern Arizona
+                    University, where I&apos;m leading the development for a speech
+                    therapy app.
                   </p>
                 </div>
               </Section>

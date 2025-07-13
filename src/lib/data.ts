@@ -7,9 +7,9 @@ export const siteMetadata = {
     github: "https://github.com/csheblikar",
     linkedin: "https://www.linkedin.com/in/csheblikar/",
   },
-  tagline: "Grad Student at NAU",
+  tagline: "Mobile App Developer | Game Designer | Software Developer at NAU",
   description:
-    "Passionate mobile application developer and tech enthusiast dedicated to crafting innovative solutions for real-world challenges.",
+    "Blending code with creativity to craft apps that make a real-world impact.",
   siteUrl: "https://csheblikar.me",
 };
 
