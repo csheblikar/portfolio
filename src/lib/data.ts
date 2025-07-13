@@ -48,19 +48,19 @@ export const experience: Experience[] = [
   {
     position: "Research Software Engineer",
     company: "Northern Arizona University",
-    description: "As a research software engineer, I led the transition of SpokeIt, a speech therapy game from Swift to Unity, enabling cross-platform deployment and improving performance. I integrated Google Cloud's Speech-to-Text API for real-time feedback and supported authentication through Google Play and Game Center. I also contributed to game research by analyzing ASSETS literature and broadband data to inform inclusive design practices.",
+    description:
+      "As a research software engineer, I led the transition of SpokeIt, a speech therapy game from Swift to Unity, enabling cross-platform deployment and improving performance. I integrated Google Cloud's Speech-to-Text API for real-time feedback and supported authentication through Google Play and Game Center. I also contributed to game research by analyzing ASSETS literature and broadband data to inform inclusive design practices.",
     skills: ["Unity", "C#", "Google Speech-to-Text"],
-    startDate: "16 May 2024"
-
+    startDate: "16 May 2024",
   },
   {
     position: "Teaching Assistant",
     company: "Northern Arizona University",
     description:
-      "Assisted professor with grading homework and project assignments. Held office hours to aid students in their understanding of core concepts and reported to the professor the extent of their understanding.",
+      "Assisted professors with grading homework and project assignments. Held office hours to aid students in their understanding of core concepts and reported to the professor the extent of their understanding.",
     skills: ["C", "Data Structures", "Web Programming"],
     startDate: "28 August 2023",
-    endDate: "13 Dec 2024"
+    endDate: "13 Dec 2024",
   },
   {
     position: "Android Development Intern",
