@@ -46,18 +46,27 @@ export const projects: Project[] = [
 
 export const experience: Experience[] = [
   {
+    position: "Research Software Engineer",
+    company: "Northern Arizona University",
+    description: "As a research software engineer, I led the transition of SpokeIt, a speech therapy game from Swift to Unity, enabling cross-platform deployment and improving performance. I integrated Google Cloud's Speech-to-Text API for real-time feedback and supported authentication through Google Play and Game Center. I also contributed to game research by analyzing ASSETS literature and broadband data to inform inclusive design practices.",
+    skills: ["Unity", "C#", "Google Speech-to-Text"],
+    startDate: "16 May 2024"
+
+  },
+  {
     position: "Teaching Assistant",
     company: "Northern Arizona University",
     description:
       "Assisted professor with grading homework and project assignments. Held office hours to aid students in their understanding of core concepts and reported to the professor the extent of their understanding.",
     skills: ["C", "Data Structures", "Web Programming"],
     startDate: "28 August 2023",
+    endDate: "13 Dec 2024"
   },
   {
     position: "Android Development Intern",
     company: "SecqureAIse Technologies",
     description:
-      "In just one month, I played a key role in launching PluxAI, from conception to execution. Collaborating on integrating PluxAI with Firestore, I enabled real-time updates for employee timesheets. I also implemented a user-friendly leave enquiry screen for the PluxAI Android app, simplifying leave management. Utilizing the Room Persistence Library, I ensured secure local storage of attendance data and seamless synchronization with cloud storage, guaranteeing data integrity during critical events",
+      "At SecqurAIse, I developed and launched PluxAI, an Android app for attendance and leave management, within three months. I implemented features using Firebase and Room to support real-time sync and offline access, and applied the MVVM architecture to streamline user interactions and ensure maintainable code.",
     skills: ["Java", "Kotlin", "Android Studio", "Google Firebase"],
     startDate: "16 August 2022",
     endDate: "23 December 2022",
@@ -66,7 +75,7 @@ export const experience: Experience[] = [
     position: "Project Intern",
     company: "Hitachi Vantara",
     description:
-      "I conducted thorough analysis of client servers hosted on Amazon Web Services (AWS), pinpointing the root cause of high CPU utilization. Additionally, I monitored server performance utilizing Datadog, a cloud-based monitoring and analytics platform, ensuring optimal operation and preemptively addressing any emerging issues.",
+      "During my internship at Hitachi, I worked on cloud infrastructure monitoring using AWS and Datadog. I configured dashboards, alerts, and logs to track system health and application performance, helping the team improve observability and incident response in real time.",
     skills: ["AWS", "Datadog"],
     startDate: "16 February 2022",
     endDate: "08 July 2022",
