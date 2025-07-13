@@ -2,7 +2,6 @@ import clsx from "clsx";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 
-import Container from "@/components/container";
 import { Header } from "@/components/header";
 import Spotlight from "@/components/spotlight";
 import { siteMetadata } from "@/lib/data";
@@ -38,7 +37,7 @@ export default function RootLayout({
         <Providers>
           <Spotlight>
             <Header />
-            <Container>{children}</Container>
+            {children}
           </Spotlight>
         </Providers>
       </body>

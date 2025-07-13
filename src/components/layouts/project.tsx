@@ -7,6 +7,7 @@ import { useContext } from "react";
 import { AppContext } from "@/app/providers";
 import { ProjectWithSlug } from "@/lib/projects";
 import { formatDate } from "@/utils/date";
+import Container from "../container";
 import Prose from "../prose";
 
 export default function ProjectLayout({
@@ -17,7 +18,7 @@ export default function ProjectLayout({
   const { previousPathname } = useContext(AppContext);
 
   return (
-    <div className="lg:py-32">
+    <Container className="pt-16 pb-8">
       <div className="xl:relative">
         <div className="mx-auto max-w-2xl">
           {previousPathname && (
@@ -52,6 +53,6 @@ export default function ProjectLayout({
           </article>
         </div>
       </div>
-    </div>
+    </Container>
   );
 }

@@ -1,6 +1,7 @@
 import clsx from "clsx";
 import Link from "next/link";
 
+import Container from "@/components/container";
 import { getAllProjects, ProjectWithSlug } from "@/lib/projects";
 
 function TableRow(data: ProjectWithSlug) {
@@ -48,34 +49,36 @@ export default async function ArchivePage() {
   ];
 
   return (
-    <div className="lg:py-24">
-      <h1 className="text-4xl font-bold tracking-tight text-slate-200 sm:text-5xl">
-        All Projects
-      </h1>
+    <Container>
+      <div className="lg:py-24">
+        <h1 className="text-4xl font-bold tracking-tight text-slate-200 sm:text-5xl">
+          All Projects
+        </h1>
 
-      <table id="content" className="mt-12 w-full border-collapse text-left">
-        <thead className="sticky top-0 z-10 border-b border-slate-300/10 bg-slate-900/75 px-6 py-5 backdrop-blur">
-          <tr>
-            {columns.map(({ name, className }) => (
-              <th
-                key={name}
-                className={clsx(
-                  "py-4 pr-8 text-sm font-semibold text-slate-200",
-                  className,
-                )}
-              >
-                {name}
-              </th>
+        <table id="content" className="mt-12 w-full border-collapse text-left">
+          <thead className="sticky top-0 z-10 border-b border-slate-300/10 bg-slate-900/75 px-6 py-5 backdrop-blur">
+            <tr>
+              {columns.map(({ name, className }) => (
+                <th
+                  key={name}
+                  className={clsx(
+                    "py-4 pr-8 text-sm font-semibold text-slate-200",
+                    className,
+                  )}
+                >
+                  {name}
+                </th>
+              ))}
+            </tr>
+          </thead>
+
+          <tbody>
+            {projects.map((project) => (
+              <TableRow key={project.slug} {...project} />
             ))}
-          </tr>
-        </thead>
-
-        <tbody>
-          {projects.map((project) => (
-            <TableRow key={project.slug} {...project} />
-          ))}
-        </tbody>
-      </table>
-    </div>
+          </tbody>
+        </table>
+      </div>
+    </Container>
   );
 }

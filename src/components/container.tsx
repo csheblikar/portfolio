@@ -1,5 +1,4 @@
 import clsx from "clsx";
-import Link from "next/link";
 
 export default function Container({
   children,
@@ -7,20 +6,15 @@ export default function Container({
   ...props
 }: React.ComponentPropsWithoutRef<"div">) {
   return (
-    <div
-      className={clsx(
-        "mx-auto min-h-screen max-w-7xl px-6 py-12 md:px-12 md:py-20 lg:px-24 lg:py-0",
-        className,
-      )}
-      {...props}
-    >
-      <Link
-        href="#content"
-        className="absolute top-0 left-0 block -translate-x-full rounded-sm bg-linear-to-br from-teal-400 via-blue-500 to-purple-600 px-4 py-3 text-sm font-bold tracking-widest text-white uppercase focus-visible:translate-x-0"
-      >
-        Skip to Content
-      </Link>
-      {children}
+    <div className={clsx("sm:px-8", className)} {...props}>
+      <div className="mx-auto w-full max-w-7xl lg:px-8">
+        <div
+          className={clsx("relative px-4 sm:px-8 lg:px-12", className)}
+          {...props}
+        >
+          <div className="mx-auto max-w-2xl lg:max-w-5xl">{children}</div>
+        </div>
+      </div>
     </div>
   );
 }
