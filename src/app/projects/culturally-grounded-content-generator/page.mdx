@@ -1,0 +1,79 @@
+import {
+  Accordian,
+  AccordianContent,
+  AccordianItem,
+  AccordianTrigger,
+} from '@/components/accordian';
+import ProjectLayout from '@/components/layouts/project';
+
+export const project = {
+  title: "Culturally Grounded Content Generator",
+  date: "2024-03",
+  description:
+    "A research-driven redesign of an AI-powered educational platform to better serve culturally diverse users, particularly Indigenous communities. This project involved heuristic evaluations, participatory design, and high-fidelity prototyping.",
+  image: "https://placehold.co/200x48.png",
+  url: "https://www.figma.com/design/vFy2PpmRKgA2PKeh9HnOUZ/High-Fidelity-Prototype",
+  madeAt: "NAU",
+  tools: ["Figma", "Heuristic Evaluation", "Participatory Design", "Usability Testing"],
+};
+
+export const metadata = {
+  title: project.title,
+  description: project.description,
+};
+
+export default (props) => <ProjectLayout project={project} {...props} />;
+
+This project explored how AI-powered educational platforms can be redesigned to better serve culturally diverse users, especially Indigenous communities. As part of a research initiative at NAU, I led a usability-focused design process that included heuristic evaluations, participatory design sessions, and high-fidelity prototyping using Figma.
+
+Our goal was to address gaps in accessibility and cultural responsiveness by redesigning chat-based educational tools. The result was a more intuitive, collaborative, and inclusive platform tailored to the needs of real users.
+
+## Key Features
+
+<Accordian as="dl">
+  <AccordianItem>
+    <AccordianTrigger as="dt">
+      Heuristic Evaluation
+    </AccordianTrigger>
+    <AccordianContent as="dd">
+      Conducted expert reviews using Jakob Nielsen's 10 usability principles, identifying issues like unclear system feedback and limited navigation control.
+    </AccordianContent>
+  </AccordianItem>
+  <AccordianItem>
+    <AccordianTrigger as="dt">
+      Participatory Design
+    </AccordianTrigger>
+    <AccordianContent as="dd">
+      Led 8 user studies and paper prototyping sessions, working directly with Native American participants to co-create more culturally resonant features.
+    </AccordianContent>
+  </AccordianItem>
+  <AccordianItem>
+    <AccordianTrigger as="dt">
+      Collaborative Chat UI
+    </AccordianTrigger>
+    <AccordianContent as="dd">
+      Redesigned the interface to support real-time collaboration, clearer conversational threading, and user-friendly feedback systems.
+    </AccordianContent>
+  </AccordianItem>
+  <AccordianItem>
+    <AccordianTrigger as="dt">
+      Accessibility Improvements
+    </AccordianTrigger>
+    <AccordianContent as="dd">
+      Added visual hierarchy, better labeling, and screen reader compatibility to improve inclusiveness.
+    </AccordianContent>
+  </AccordianItem>
+  <AccordianItem>
+    <AccordianTrigger as="dt">
+      Figma Prototypes
+    </AccordianTrigger>
+    <AccordianContent as="dd">
+      Created high-fidelity mockups and design flows to communicate and validate proposed changes.
+    </AccordianContent>
+  </AccordianItem>
+</Accordian>
+
+## Tech Stack
+
+- **Figma** - Design and prototyping
+- **Heuristic Evaluation, Participatory Design, Usability Testing** - UX research methods
